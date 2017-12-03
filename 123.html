@@ -1,0 +1,329 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+-->  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style type="text/css">
+    /* Always set the map height explicitly to define the size of the div
+    * element that contains the map. */
+    #map {
+      height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container-full {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .col-8{
+      padding-left: 0px;
+      padding-right: 0px;
+      height: 100%;
+      overflow: scroll;
+
+    }
+
+    .col-4,{
+      padding-right: 10px;
+      padding-left: 0px;
+      height: 100%;
+      overflow: scroll;
+    }
+
+  </style>
+
+  <title>CSC2228 Project Demo</title>
+
+
+</head>
+
+<body>
+
+
+  <div class="container-full">
+    <div class="row" style="height:100%; margin-bottom:0px">
+
+      <!-- Map -->
+      <div class="col-8">
+        <div id="map">
+
+        </div>
+      </div>
+
+
+      <!-- Calandar View -->
+      <div id="cardholder" class="col-4" style="overflow: scroll; height: 100%">
+<!--         <div class="card">
+
+         <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">
+            <i class="material-icons medium left">accessibility</i>Card Title<i class="material-icons right">keyboard_arrow_up</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+
+
+
+
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+           <img border="0" src="https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&key=AIzaSyCEJPcVVU9bBh_f757noMSJbz0WsF7joc4">
+         </div>
+         <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">
+            <i class="material-icons medium left">accessibility</i>
+            Card Title<i class="material-icons right">keyboard_arrow_up</i></span>
+
+
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
+              Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+             <img border="0" src="https://maps.googleapis.com/maps/api/staticmap?path=color:0x0000ff%7Cweight:5%7C40.737102,-73.990318%7C40.749825,-73.987963%7C40.752946,-73.987384%7C40.755823,-73.986397&size=600x300&key=AIzaSyCEJPcVVU9bBh_f757noMSJbz0WsF7joc4">
+           </div>
+           <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+              <i class="material-icons medium left">directions_run</i>
+              Card Title<i class="material-icons right">keyboard_arrow_up</i></span>
+
+
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">
+                <i class="material-icons medium left">directions_walk</i>
+                Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+               <img border="0" src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=AIzaSyCEJPcVVU9bBh_f757noMSJbz0WsF7joc4">
+             </div>
+             <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">
+                <i class="material-icons medium left">directions_walk</i>
+                Card Title<i class="material-icons right">keyboard_arrow_up</i></span>
+
+
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div> -->
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Google Map API -->
+   <!--    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEJPcVVU9bBh_f757noMSJbz0WsF7joc4&callback=initMap&language=en">
+    </script> -->
+    <script  async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEJPcVVU9bBh_f757noMSJbz0WsF7joc4&libraries=places&callback=initMap&language=en"></script>
+
+
+    <!-- Main Script -->
+    <script type='text/javascript'>
+
+    //  var map;
+    //  var infowindow;
+
+    function initMap() {
+
+      var lock=0;
+    jQuery.getJSON('http://localhost:63342/1Clound/testfileNov30', function(data) {
+      var input=data;
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: {lat: 43.659742, lng: -79.397643},
+        mapTypeId: 'terrain'
+      }
+      );
+
+
+
+      var service;
+      var infowindow;
+      for (var i = 0, len = input.length; i < len; i++) {
+
+        console.log(input[i]["Action"]);
+        console.log(input[i]["Starttime"]);
+        console.log(input[i]["Endtime"]);
+        console.log(input[i]["Location"][0]);
+
+
+        var service = new google.maps.places.PlacesService(map);
+        
+        function nearby(location1){
+              service.nearbySearch({
+              location: location1,
+              radius: 100,
+            }, callback);
+        }
+       
+
+
+        function callback(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            console.log(results)
+            for (var i = results.length - 1; i >= 0; i--) {
+              
+            }
+          }
+        }
+
+
+
+        if(input[i]["Action"]=="running"){
+            color='#f49441';//Orangen
+
+            $('#cardholder').append('<div class="card">\
+              <div class="card-image waves-effect waves-block waves-light">\
+               <img border="0" src="'+input[i]["url"]
+              +'">\
+              </div>\
+             <div class="card-content">\
+              <span class="card-title activator grey-text text-darken-4">\
+                <i class="material-icons medium left">directions_run</i>\
+                ' +input[i]["Starttime"]+ '   \n\nRunning for ' +input[i]["durationm"] +' minutes '+input[i]["durations"]+' seconds'+'<i class="material-icons right">keyboard_arrow_up</i></span>\
+              </div>\
+              <div class="card-reveal">\
+                <span class="card-title grey-text text-darken-4">Summary<i class="material-icons right">close</i></span>\
+              <p>Duration:'+ input[i]["durationm"] +' minutes '+input[i]["durations"]+' seconds</p>\
+              <p>Start:\t\t'+ input[i]["Starttime"] +'</p>\
+              <p>End:\t\t'+ input[i]["Endtime"] +'</p>\
+              </div>\
+            </div>');
+          }
+          if(input[i]["Action"]=="walking"){
+            color='#8941f4';//purple
+
+            $('#cardholder').append('<div class="card">\
+              <div class="card-image waves-effect waves-block waves-light">\
+               <img border="0" src="'+input[i]["url"]
+              +'">\
+              </div>\
+             <div class="card-content">\
+              <span class="card-title activator grey-text text-darken-4">\
+                <i class="material-icons medium left">directions_walk</i>\
+                ' +input[i]["Starttime"]+ '   \n walking for ' +input[i]["durationm"] +' minutes '+input[i]["durations"]+' seconds'+'<i class="material-icons right">keyboard_arrow_up</i></span>\
+              </div>\
+              <div class="card-reveal">\
+                <span class="card-title grey-text text-darken-4">Summary<i class="material-icons right">close</i></span>\
+              <p>Duration:'+ input[i]["durationm"] +' minutes '+input[i]["durations"]+' seconds</p>\
+              <p>Start:\t\t'+ input[i]["Starttime"] +'</p>\
+              <p>End:\t\t'+ input[i]["Endtime"] +'</p>\
+             </div>\
+            </div>');
+          }
+          if(input[i]["Action"]=="staying_still"){
+            lock=1;
+            color='#4286f4';//Blues
+                        $('#cardholder').append(' <div class="card">\
+          <div class="card-image waves-effect waves-block waves-light">\
+           <img border="0" src="'+input[i]["url"]
+         +'"\
+         ></div><div class="card-content">\
+          <span class="card-title activator grey-text text-darken-4">\
+            <i class="material-icons medium left">accessibility</i>\
+            ' +input[i]["Starttime"]+ '   \n Stay in ' +input[i]["nearby"][1] + '   '+input[i]["pred"]+'<i class="material-icons right">keyboard_arrow_up</i></span>\
+          </div>\
+          \
+          <div class="card-reveal">\
+            <span class="card-title grey-text text-darken-4">\
+              Summary<i class="material-icons right">close</i></span>\
+              <p>Duration:'+ input[i]["durationm"] +' minutes '+input[i]["durations"]+' seconds</p>\
+              <p>Start:\t\t'+ input[i]["Starttime"] +'</p>\
+              <p>End:\t\t'+ input[i]["Endtime"] +'</p>\
+              <p>Location:\t\t'+ input[i]["nearby"][0]+',  '+input[i]["nearby"][1]+',  '+input[i]["nearby"][2] +'</p>\
+            </div>\
+          </div>');
+
+          //+"Duration:"+input[i]["duration"]+" Starttime:"+input[i]["Starttime"]+ " Endtime:"+input[i]["Endtime"]  +
+            var container = document.getElementById("cardholder");
+            var content = container.innerHTML;
+            container.innerHTML= content;        
+            var cityCircle = new google.maps.Circle({
+              strokeColor: '#4286f4',
+              strokeOpacity: 0.7,
+              strokeWeight: 2,
+              fillColor: '#4286f4',
+              fillOpacity: 0.1,
+              map: map,
+              center: input[i]["Location"][0],
+                radius: input[i]["durationm"]*4 //can be duration of stay?
+              });
+
+
+            
+
+
+          }
+
+          var flightPath = new google.maps.Polyline({
+            path: input[i]["Location"],
+            geodesic: true,
+            strokeColor: color,
+            strokeOpacity: 0.8,
+            strokeWeight: 4
+          });
+             flightPath.setMap(map);
+
+         
+
+
+          
+
+
+        }
+
+      }
+      )
+  }
+</script>
+
+</body>
+
+</html>
+
