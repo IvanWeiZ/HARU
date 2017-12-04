@@ -1,0 +1,6 @@
+framework module Pods_csc2228 {
+  umbrella header "Pods-csc2228-umbrella.h"
+
+  export *
+  module * { export * }
+}
